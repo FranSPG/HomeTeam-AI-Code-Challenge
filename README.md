@@ -67,3 +67,11 @@ allowing for fast iterations and testing with different videos, frame rates, and
 
 I packaged everything using Docker and managed the containers with a Docker Compose file.
 This setup streamlines deployment and makes it easy to manage dependencies and configuration.
+
+---
+# Future improvements
+- Place the camera higher to get a clearer view of the field and players. This adjustment will allow the model to detect the ball and people more easily, improving overall accuracy and performance. By providing a better angle, the model will have fewer occlusions and clearer frames to work with.
+- Create a custom dataset specifically for this type of camera. Open-source models are typically trained on images captured with standard lenses, not fisheye-like cameras. Since the visual distortion in fisheye images can affect detection, having a dataset tailored to this camera type would allow the model to learn its unique characteristics. Fine-tuning the model with such data could significantly improve its detection capabilities in these specific conditions.
+- Optimize the FastAPI implementation, particularly the handling of uploaded files. Right now, the process for managing and storing uploaded videos feels a bit messy. Streamlining this part of the code, possibly by adding proper validation and efficient file storage mechanisms, will make the API more robust and user-friendly.
+
+
